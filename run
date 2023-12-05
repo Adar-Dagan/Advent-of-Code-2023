@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+    echo "Pass exactly one file to run"
+    exit 1
+fi
+
+source="${1}.cpp"
+
+g++ $source && ./a.out && rm a.out
+
